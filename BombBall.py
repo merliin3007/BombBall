@@ -38,17 +38,17 @@ class Bomb(Pawn):
     def init_textures(self):
         self.render_object: Sprite = Sprite()
         self.bomb_texture = Texture()
-        self.bomb_texture.load_from_file('textures\\bomb.mtex', 0.2)
+        self.bomb_texture.load_from_file(os.path.join('textures', 'bomb.mtex'), 0.2)
         self.render_object.texture = self.bomb_texture
 
         self.explosion_texture = AnimTexture()
         self.explosion_texture.framerate = 5
         self.explosion_texture.repeat = False
-        self.explosion_texture.add_frame_from_file('textures\\explosion\\frame_1.mtex')
-        self.explosion_texture.add_frame_from_file('textures\\explosion\\frame_2.mtex')
-        self.explosion_texture.add_frame_from_file('textures\\explosion\\frame_3.mtex')
-        self.explosion_texture.add_frame_from_file('textures\\explosion\\frame_4.mtex')
-        self.explosion_texture.add_frame_from_file('textures\\explosion\\frame_5.mtex')
+        self.explosion_texture.add_frame_from_file(os.path.join('textures', 'explosion', 'frame_1.mtex'))
+        self.explosion_texture.add_frame_from_file(os.path.join('textures', 'explosion', 'frame_2.mtex'))
+        self.explosion_texture.add_frame_from_file(os.path.join('textures', 'explosion', 'frame_3.mtex'))
+        self.explosion_texture.add_frame_from_file(os.path.join('textures', 'explosion', 'frame_4.mtex'))
+        self.explosion_texture.add_frame_from_file(os.path.join('textures', 'explosion', 'frame_5.mtex'))
         self.explosion_texture.size = 0.4
 
     def reset(self):
@@ -98,7 +98,7 @@ class Enemy(Pawn):
 
         sprite = Sprite()
         texture = Texture()
-        texture.load_from_file('textures\\enemy.mtex', 0.25) # 0.2
+        texture.load_from_file(os.path.join('textures', 'enemy.mtex'), 0.25) # 0.2
         sprite.texture = texture
         self.render_object = sprite
         self.velocity_max = 0.1
@@ -196,7 +196,7 @@ class BombBall(Game):
         # Sonne
         sun = LightSource()
         sun_texture = Texture()
-        sun_texture.load_from_file('textures\\sun.mtex', 0.4)
+        sun_texture.load_from_file(os.path.join('textures', 'sun.mtex'), 0.4)
         sun.texture = sun_texture
         sun.set_position(0.5, 0.8)
         bg0_layer.add_object(sun)
@@ -204,7 +204,7 @@ class BombBall(Game):
         # Mond
         moon = LightSource()
         moon_texture = Texture()
-        moon_texture.load_from_file('textures\\moon.mtex', 0.4)
+        moon_texture.load_from_file(os.path.join('textures', 'moon.mtex'), 0.4)
         moon.texture = moon_texture
         moon.brightness = 0.2
         moon.set_position(0.5, 0.8)
@@ -228,25 +228,25 @@ class BombBall(Game):
 
         sprite = Sprite()
         tex = Texture()
-        tex.load_from_file("textures\\player.mtex", 0.25) #0.2
+        tex.load_from_file(os.path.join("textures", "player.mtex"), 0.25) #0.2
         sprite.texture = tex
         pawn.render_object = sprite
 
         baum = Sprite()
         baumtex = Texture()
-        baumtex.load_from_file("textures\\behindibaum.mtex", 1.0)
+        baumtex.load_from_file(os.path.join("textures", "behindibaum.mtex"), 1.0)
         baum.texture = baumtex
         terrain.add_foliage(baum, 0.5)
 
         grass = Sprite()
         grasstex = Texture()
-        grasstex.load_from_file("textures\\grass.mtex", 0.2)
+        grasstex.load_from_file(os.path.join("textures", "grass.mtex"), 0.2)
         grass.texture = grasstex
         terrain.add_foliage(grass, 3)
 
         spruce = Sprite()
         sprucetex = Texture()
-        sprucetex.load_from_file("textures\\spruce", 0.3)
+        sprucetex.load_from_file(os.path.join("textures", "spruce"), 0.3)
         spruce.texture = sprucetex
         bg1_terrain.add_foliage(spruce, 1.0)
 
@@ -263,7 +263,7 @@ class BombBall(Game):
         self.init_enemies()
 
         self.night_sky_texture = Texture()
-        self.night_sky_texture.load_from_file('textures\\night_sky.mtex')
+        self.night_sky_texture.load_from_file(os.path.join('textures', 'night_sky.mtex'))
         self.night_sky_texture.size = 1.0
 
         self.enable_day_night_cycle = True

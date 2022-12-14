@@ -15,7 +15,7 @@ class std_font:
 
         # Leerzeichen
         32 : [],
-#       # Punkt
+        # Punkt
         46 : [
             [[0.5, 0.0]]
         ],

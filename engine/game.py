@@ -140,7 +140,11 @@ class Game:
             i += self.render_time + self.send_time
             if i >= 1.0 and SHOW_FRAMERATE:
                 i = 0.0
-                system('cls')
+
+                if PLATFORM == 'Windows':
+                    system('cls')
+                else:
+                    system('clear')
                 print(f'{PLATFORM} {PLATFORM_VERSION}')
                 print('----------------------------------------------')
                 print(f'{TerminalColors.ENDC}render_time_avg: {self.render_time_avg}')

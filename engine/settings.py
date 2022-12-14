@@ -6,7 +6,7 @@ import platform
 Login Daten für Pyghthouse
 """
 USERNAME      = 'stu235271'
-API_TOKEN     = 'API-TOK_kOKW-fzti-yo9H-gRHt-nWaL'
+API_TOKEN     = 'API-TOK_5v4X-eSbe-rDER-F5o9-w6x3'
 
 """
 Framerate Begrenzung

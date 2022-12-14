@@ -10,7 +10,7 @@ Args:
     pawn_b(Pawn): Der zweite Pawn
 
 Returns:
-    (bool): 'Wahr', fals eine Kollision vorliegt, 'Falsch' andernfalls
+    (bool): 'Wahr', falls eine Kollision vorliegt, 'Falsch' andernfalls
 """
 def check_collision(pawn_a: Pawn, pawn_b: Pawn) -> bool:
     # TODO: differenciate between box-box, box-circle, circle-circle... collision
@@ -25,7 +25,7 @@ Args:
     pawn_b(Pawn): Der zweite Pawn
 
 Returns:
-    (bool): 'Wahr', fals eine Kollision vorliegt, 'Falsch' andernfalls
+    (bool): 'Wahr', falls eine Kollision vorliegt, 'Falsch' andernfalls
 """
 def check_box_collion(pawn_a: Pawn, pawn_b: Pawn) -> bool:
     # x-achsen Kollision
