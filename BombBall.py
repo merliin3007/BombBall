@@ -358,7 +358,7 @@ class BombBall(Game):
             self.render_brightness -= fade_step
             if self.playback_speed == 0.0:
                 if self.score > self.highscore:
-                    self.display_text('HIGH SCORE!', True)
+                    self.display_text('HIGHSCORE!', True)
                 self.reset_game()
                 self.playback_speed = 1.0
                 self.render_brightness = 1.0
